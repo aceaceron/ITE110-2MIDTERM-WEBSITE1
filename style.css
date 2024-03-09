@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Verdana;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     header {
         background-image: url('IMG/calaguas-pic01.jpg');
         background-size: cover;
@@ -11,6 +11,31 @@ body {
         text-align: center;
         color: white;
         font-size: 30px;
+    }
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    #myBtn img {
+        width: 20px;
+    }
+    #myBtn:hover {
+        background-color: #555;
+    }
+    .postTitle {
+        font-size: 10pt;
+        text-align: center;
     }
     nav {
         float: center;
@@ -25,7 +50,7 @@ body {
         font-size: 15px;
         display: block;
         margin-left: 10px;
-        padding: 15px;
+        padding: 18px;
     }
     a {
         text-decoration: none;
@@ -34,9 +59,15 @@ body {
         border: 1px solid white;
         border-radius: 5px;
     }
-    p {
+    section h2 {
+        text-align: center;
+    }
+    section p {
         text-align: justify;
         line-height: 1.5;
+    }
+    section ul li {
+        line-height: 2.5;
     }
     section {
         width: 70%;
@@ -44,10 +75,25 @@ body {
         padding: 10px;
         margin-left: 20px;
     }
+    section a {
+        color: red;
+    }
+    #section6 p {
+        text-align: center;
+    }
+    #section6 img {
+        width: 60px;
+    }
+    .contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     aside {
         width: 25%;
         float: right;
         padding: 10px;
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
         text-align: center;
@@ -62,23 +108,24 @@ body {
         font-weight: normal;
         letter-spacing: 5px;
     }
-    aside img {
+    #author {
         width: 100%;
         border-radius: 100%;
+    }
+    .container {
+        display: flex;
+        align-items: start;
+        gap: 1rem;
     }
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
     }
-    .grid-item {
-        border: 1px solid #ccc;
-    }
     .grid-item img {
         max-width: 100%;
         height: auto;
     }
-
     a:hover {
         background-color: white;
         color: black;

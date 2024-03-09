@@ -7,11 +7,23 @@ document.addEventListener("DOMContentLoaded", function() {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 });
 
+const mybutton = document.getElementById("myBtn");
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+    mybutton.style.display = (window.scrollY > 20) ? "block" : "none";
+}
+
+function topFunction() {
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
